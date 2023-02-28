@@ -12,6 +12,8 @@ public class Backup {
     public void setBackup(BD backup){
         this.bd = new BD();
         this.bd.setPersonas(backup.getPersonas());
+        
+		this.bd.setPersonas(bd.getPersonas().stream().toList());
     }
 
     public String getAlias() {

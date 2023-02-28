@@ -5,7 +5,9 @@ public class Memento {
 	private BD bd;
 
     public void setBd(BD bd) {
-		this.bd = new BD();}
+		this.bd = new BD();
+		this.bd.setPersonas(bd.getPersonas().stream().toList());
+    }
 
     public Backup createBackup(String alias) {
 		return new Backup(alias, bd);
