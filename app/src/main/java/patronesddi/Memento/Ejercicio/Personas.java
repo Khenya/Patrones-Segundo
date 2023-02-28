@@ -39,4 +39,5 @@ public class Personas {
 		System.out.format("Edad: ", edad);
 		System.out.println();
 	}
+
 }

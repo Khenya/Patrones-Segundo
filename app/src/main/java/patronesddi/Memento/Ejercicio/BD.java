@@ -6,8 +6,6 @@ import java.util.List;
 public class BD {
     private List<Personas> personas = new ArrayList<>();
 
-    
-
     public BD(){
         personas = new ArrayList<>();
     }

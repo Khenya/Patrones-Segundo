@@ -4,12 +4,17 @@ public class Memento {
     private String alias;
 	private BD bd;
 
+    public void setBd(BD bd) {
+		this.bd = new BD();}
 
-    public Memento(String alias, BD bd) {
-        this.alias = alias;
-        this.bd = bd;
-    }
+    public Backup createBackup(String alias) {
+		return new Backup(alias, bd);
+	}
 
+	public BD restore(Backup backup) {
+		this.bd = backup.getBd();
+		return this.bd;
+	}
 
     public String getAlias() {
         return alias;
@@ -21,10 +26,6 @@ public class Memento {
     public BD getBd() {
         return bd;
     }
-    public void setBd(BD bd) {
-        this.bd = bd;
-    }
-
-
+   
 
 }
