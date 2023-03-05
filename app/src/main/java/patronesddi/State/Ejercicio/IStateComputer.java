@@ -1,5 +1,5 @@
 package patronesddi.State.Ejercicio;
 
 public interface IStateComputer {
-    void computerBehavior(Computadora computadora);
+    public void changeComponentsState(Computadora computadora);
 }

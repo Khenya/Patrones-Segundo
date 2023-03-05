@@ -1,45 +1,51 @@
 package patronesddi.State.Ejercicio;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Computadora {
-    private MemoryRam memoryRam;
-    private TarjetaVideo tarjetaVideo;
-    // IState
-    private IStateComputer stateComputer;
+    private List<String> openPrograms = new ArrayList<>();
+	private RAM ram;
+	private CPU cpu;
+	private IStateComputer currentState;
 
+	public List<String> getOpenPrograms() {
+		return openPrograms;
+	}
 
-    public Computadora(MemoryRam memoryRam, TarjetaVideo tarjetaVideo) {
-        this.memoryRam = memoryRam;
-        this.tarjetaVideo = tarjetaVideo;
-    }
+	public void setOpenPrograms(List<String> openPrograms) {
+		this.openPrograms = openPrograms;
+	}
 
-    public MemoryRam getMemoryRam() {
-        return memoryRam;
-    }
-    public void setMemoryRam(MemoryRam memoryRam) {
-        this.memoryRam = memoryRam;
-    }
+	public RAM getRam() {
+		return ram;
+	}
+	public void setRam(RAM ram) {
+		this.ram = ram;
+	}
 
-    public TarjetaVideo getTarjetaVideo() {
-        return tarjetaVideo;
-    }
-    public void setTargetaVideo(TarjetaVideo tarjetaVideo) {
-        this.tarjetaVideo = tarjetaVideo;
-    }
+	public CPU getCpu() {
+		return cpu;
+	}
+	public void setCpu(CPU cpu) {
+		this.cpu = cpu;
+	}
 
-    public IStateComputer getStateComputer() {
-        return stateComputer;
-    }
-    public void setStateComputer(IStateComputer stateComputer) {
-        this.stateComputer = stateComputer;
-    }
+	public Computadora(String ramName, String cpuName) {
+		currentState = new ComputadoraApagada();
+		ram = new RAM(ramName);
+		cpu = new CPU(cpuName);
+	}
 
-    public void useComputer(){
-        this.stateComputer.computerBehavior(this);
-    }
+	public void show() {
+		System.out.println("*********** Computadora ***********");
+		System.out.println("Cantidad de programas abiertos: " + openPrograms.size());
+		ram.show();
+		cpu.show();
+	}
 
-    public void show() {
-		System.out.println("********** Computadora **********");
-		memoryRam.show();
-		tarjetaVideo.show();
+	public void changeState(IStateComputer state) {
+		currentState = state;
+		currentState.changeComponentsState(this);
 	}
 }

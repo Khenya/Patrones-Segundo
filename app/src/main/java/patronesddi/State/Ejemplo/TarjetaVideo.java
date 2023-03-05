@@ -1,4 +1,4 @@
-package patronesddi.State.Ejercicio;
+package patronesddi.State.Ejemplo;
 
 public class TarjetaVideo {
 
