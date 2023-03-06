@@ -35,7 +35,7 @@ public class ComputadoraPrendida implements IStateComputer {
 			System.out.println("Abriendo el programa: " + openProgram);
 			computadora.getOpenPrograms().add(openProgram);
 			try {
-				Thread.sleep(1500);
+				Thread.sleep(5000);
 				currentCpuConsume += 5;
 				computadora.getCpu().setConsumoCPU(currentCpuConsume);
 				currentRamConsume += 5;

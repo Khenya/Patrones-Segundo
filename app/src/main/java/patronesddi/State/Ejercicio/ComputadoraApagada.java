@@ -7,8 +7,8 @@ public class ComputadoraApagada implements IStateComputer{
         System.out.println("Apagando computadora...");
 
 		computadora.getOpenPrograms().clear();
-		computadora.getCpu().setConsumoCPU(0.5);
-		computadora.getRam().setConsumo(0.5);
+		computadora.getCpu().setConsumoCPU(1);
+		computadora.getRam().setConsumo(1);
 
 		System.out.println("Computadora apagada");
     }
