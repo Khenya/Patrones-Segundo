@@ -1,11 +1,8 @@
 package patronesEstrocturales.adapter.ejercicio;
 
-public interface IEjercicio {
-    // metodos familia original
+public interface IAplicacion {
     void login();
     void logout();
     void reportes();
 
-    // metodo adaptador
-    void generacionDatos();
 }

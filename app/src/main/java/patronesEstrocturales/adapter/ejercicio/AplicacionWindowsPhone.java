@@ -2,28 +2,22 @@ package patronesEstrocturales.adapter.ejercicio;
 
 public class AplicacionWindowsPhone implements IAplicacion {
 
-    @Override
-    public void generacionDatos() {
-        // TODO Auto-generated method stub
-        
-    }
+   
 
     @Override
     public void login() {
-        // TODO Auto-generated method stub
-        
+        System.out.println("Log-in realizado -----> Windows Phone");
     }
 
     @Override
     public void logout() {
-        // TODO Auto-generated method stub
-        
+        System.out.println("Log-out realizado -----> Windows Phone");
     }
 
     @Override
     public void reportes() {
-        // TODO Auto-generated method stub
-        
+        System.out.println("Log-out realizado -----> Windows Phone");
     }
+
     
 }
