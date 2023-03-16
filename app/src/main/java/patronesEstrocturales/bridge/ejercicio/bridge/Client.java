@@ -12,6 +12,11 @@ public class Client {
         linux.arquitectura();
         linux.setArquitectura(new x64());
         linux.arquitectura();
+
+        Mac mac = new Mac(new x128());
+        mac.arquitectura();
+        mac.setArquitectura(new x64());
+        mac.arquitectura();
     }
 
 }

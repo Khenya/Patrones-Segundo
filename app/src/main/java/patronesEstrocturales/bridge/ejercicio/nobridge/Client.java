@@ -6,5 +6,8 @@ public class Client {
         windows.x64();
         Linux linux = new Linux();
         linux.x86();
+
+        Mac mac = new Mac();
+        mac.x128();
     }
 }
