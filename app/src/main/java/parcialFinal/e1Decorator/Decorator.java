@@ -6,6 +6,10 @@ public class Decorator implements  Personaje{
     private Personaje personaje;
 
 
+    public Decorator(Personaje personaje) {
+        this.personaje = personaje;
+    }
+
     @Override
     public List<String> getArmas() {
         return null;
@@ -18,7 +22,7 @@ public class Decorator implements  Personaje{
 
     @Override
     public String getNombre() {
-        return null;
+        return personaje.getNombre();
     }
 
     @Override
@@ -53,7 +57,7 @@ public class Decorator implements  Personaje{
 
     @Override
     public void setNombre(String nombre) {
-        
+        personaje.setNombre(nombre);
     }
 
     @Override
@@ -79,7 +83,7 @@ public class Decorator implements  Personaje{
 
     @Override
     public void showPersonaje() {
-        
+        personaje.showPersonaje();
     }
 
 
