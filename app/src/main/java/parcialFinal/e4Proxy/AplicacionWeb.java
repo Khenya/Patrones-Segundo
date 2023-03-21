@@ -1,5 +1,5 @@
 package parcialFinal.e4Proxy;
 
-public class Web {
+public class AplicacionWeb {
     
 }
