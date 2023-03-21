@@ -8,19 +8,16 @@ public class Composite extends Component{
 
     @Override
     public void add(Component composite) {
-        // TODO Auto-generated method stub
-        
     }
 
     @Override
     public Component get(int position) {
-        // TODO Auto-generated method stub
         return null;
     }
 
     @Override
     public void operation() {
-        // TODO Auto-generated method stub
+        
         
     }
 
