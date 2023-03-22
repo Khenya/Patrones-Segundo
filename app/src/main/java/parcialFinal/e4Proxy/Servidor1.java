@@ -1,17 +1,30 @@
 package parcialFinal.e4Proxy;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Servidor1 implements IServer{
-    private static final Servidor1 servidor1 = new Servidor1();
+    
+    private List<User> users;
 
     public Servidor1() {
+        users = new ArrayList<>();
     }
 
-    
+    public void showAllUsers() {
+        for(User usuario : users) {
+            usuario.showInfo();
+        }
+    }
+
 
     @Override
-    public void processUser(User user, AplicacionWeb web) {
-        // TODO Auto-generated method stub
-        
+    public void serverUser(User usuario) {
+
+        System.out.println("Añadiendo usuario: " + usuario.getNombre() + " al Servidor 1");
+        users.add(usuario);
+        System.out.println("Usuarios totales del servidor 1: ");
+        this.showAllUsers();
     }
     
 }

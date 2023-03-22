@@ -1,5 +1,5 @@
 package parcialFinal.e4Proxy;
 
 public interface IServer {
-    void processUser(User user,AplicacionWeb web);
+    void serverUser(User user);
 }
